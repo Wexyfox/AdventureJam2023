@@ -38,14 +38,18 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Movement.Right.canceled += RightReleased;
         pr_PlayerInput.Movement.Enable();
 
-        pr_PlayerInput.Triggers.SpellMode.started += SpellModeToggle;
+        pr_PlayerInput.Triggers.SpellMode.performed += SpellModeToggle;
         pr_PlayerInput.Triggers.SpellMode.Enable();
+        pr_PlayerInput.Triggers.Talk.performed += TalkAttempt;
+        pr_PlayerInput.Triggers.Talk.Enable();
 
         pr_PlayerInput.Spells.SpellUp.performed += SpellUp;
         pr_PlayerInput.Spells.SpellDown.performed += SpellDown;
         pr_PlayerInput.Spells.SpellLeft.performed += SpellLeft;
         pr_PlayerInput.Spells.SpellRight.performed += SpellRight;
         pr_PlayerInput.Spells.Enable();
+
+        
     }
 
     private void OnDisable()
@@ -60,8 +64,10 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Movement.Right.canceled -= RightReleased;
         pr_PlayerInput.Movement.Disable();
 
-        pr_PlayerInput.Triggers.SpellMode.started += SpellModeToggle;
+        pr_PlayerInput.Triggers.SpellMode.performed -= SpellModeToggle;
         pr_PlayerInput.Triggers.SpellMode.Disable();
+        pr_PlayerInput.Triggers.Talk.performed -= TalkAttempt;
+        pr_PlayerInput.Triggers.Talk.Disable();
 
         pr_PlayerInput.Spells.SpellUp.performed -= SpellUp;
         pr_PlayerInput.Spells.SpellDown.performed -= SpellDown;
@@ -199,6 +205,15 @@ public class InputInvoker : MonoBehaviour
     private void SpellRight(InputAction.CallbackContext pa_Callback)
     {
         InputEvents.InvokeSpellRight();
+    }
+
+    #endregion
+
+    #region Interaction Actions
+
+    private void TalkAttempt(InputAction.CallbackContext pa_Callback)
+    {
+        InputEvents.InvokeTalkAttempt();
     }
 
     #endregion

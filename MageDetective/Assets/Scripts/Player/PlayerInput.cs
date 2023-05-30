@@ -211,6 +211,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Talk"",
+                    ""type"": ""Button"",
+                    ""id"": ""8c7fc371-b4a5-4df6-af1c-9e3dfe92391d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -222,6 +231,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Player"",
                     ""action"": ""SpellMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d7689557-e886-47e6-906a-7cc8121a779f"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Talk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -257,6 +277,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         // Triggers
         m_Triggers = asset.FindActionMap("Triggers", throwIfNotFound: true);
         m_Triggers_SpellMode = m_Triggers.FindAction("SpellMode", throwIfNotFound: true);
+        m_Triggers_Talk = m_Triggers.FindAction("Talk", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -459,11 +480,13 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Triggers;
     private List<ITriggersActions> m_TriggersActionsCallbackInterfaces = new List<ITriggersActions>();
     private readonly InputAction m_Triggers_SpellMode;
+    private readonly InputAction m_Triggers_Talk;
     public struct TriggersActions
     {
         private @PlayerInput m_Wrapper;
         public TriggersActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @SpellMode => m_Wrapper.m_Triggers_SpellMode;
+        public InputAction @Talk => m_Wrapper.m_Triggers_Talk;
         public InputActionMap Get() { return m_Wrapper.m_Triggers; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -476,6 +499,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpellMode.started += instance.OnSpellMode;
             @SpellMode.performed += instance.OnSpellMode;
             @SpellMode.canceled += instance.OnSpellMode;
+            @Talk.started += instance.OnTalk;
+            @Talk.performed += instance.OnTalk;
+            @Talk.canceled += instance.OnTalk;
         }
 
         private void UnregisterCallbacks(ITriggersActions instance)
@@ -483,6 +509,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpellMode.started -= instance.OnSpellMode;
             @SpellMode.performed -= instance.OnSpellMode;
             @SpellMode.canceled -= instance.OnSpellMode;
+            @Talk.started -= instance.OnTalk;
+            @Talk.performed -= instance.OnTalk;
+            @Talk.canceled -= instance.OnTalk;
         }
 
         public void RemoveCallbacks(ITriggersActions instance)
@@ -526,5 +555,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     public interface ITriggersActions
     {
         void OnSpellMode(InputAction.CallbackContext context);
+        void OnTalk(InputAction.CallbackContext context);
     }
 }

@@ -107,4 +107,15 @@ public static class InputEvents
     }
 
     #endregion
+
+    #region Interaction Events
+
+    public static event UnityAction TalkAttempt;
+
+    public static void InvokeTalkAttempt()
+    {
+        TalkAttempt?.Invoke();
+    }
+
+    #endregion
 }
