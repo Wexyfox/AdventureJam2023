@@ -39,7 +39,6 @@ public class SpellCastingCombination : MonoBehaviour
         }
 
         pr_SpellComponents += "u";
-        SpellChecks();
     }
 
     private void SpellDown()
@@ -56,7 +55,6 @@ public class SpellCastingCombination : MonoBehaviour
         }
 
         pr_SpellComponents += "d";
-        SpellChecks();
     }
 
     private void SpellLeft()
@@ -73,7 +71,6 @@ public class SpellCastingCombination : MonoBehaviour
         }
 
         pr_SpellComponents += "l";
-        SpellChecks();
     }
 
     private void SpellRight()
@@ -90,23 +87,13 @@ public class SpellCastingCombination : MonoBehaviour
         }
 
         pr_SpellComponents += "r";
-        SpellChecks();
-    }
-
-    private void SpellChecks()
-    {
-        switch (pr_SpellComponents)
-        {
-            case "dr":
-                Debug.Log("Light spell casted");
-                Disable();
-                break;
-        }
-    }
+    }    
 
     private async void DelayDisable()
     {
         await Task.Delay(pr_DisableDelayMiliseconds);
+        SpellChecks();
+
         if (pr_StartedCasting)
         {
             Debug.Log("Casting failed");
@@ -119,5 +106,24 @@ public class SpellCastingCombination : MonoBehaviour
         pr_StartedCasting = false;
         pr_SpellComponents = "";
         s_SpellCastingMode.SpellcastingModeDisable();
+    }
+
+    private void SpellChecks()
+    {
+        switch (pr_SpellComponents)
+        {
+            case "dr":
+                Debug.Log("Light spell casted");
+                Disable();
+                break;
+            case "drrud":
+                Debug.Log("UV light spell casted");
+                Disable();
+                break;
+            case "durddl":
+                Debug.Log("Reveal spell casted");
+                Disable();
+                break;
+        }
     }
 }
