@@ -6,6 +6,7 @@ public class InputInvoker : MonoBehaviour
     #region Editor Fields
 
     private PlayerInput pr_PlayerInput; //Action Maps
+    [SerializeField] private SpellCastingMode s_SpellCastingMode;
 
     #endregion
 
@@ -76,48 +77,56 @@ public class InputInvoker : MonoBehaviour
 
     private void UpPressed(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
         pr_YAxis += 1;
         MovementDirection();
     }
 
     private void DownPressed(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
         pr_YAxis -= 1;
         MovementDirection();
     }
 
     private void LeftPressed(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
         pr_XAxis -= 1;
         MovementDirection();
     }
 
     private void RightPressed(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
         pr_XAxis += 1;
         MovementDirection();
     }
 
     private void UpReleased(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
         pr_YAxis -= 1;
         MovementDirection();
     }
 
     private void DownReleased(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
         pr_YAxis += 1;
         MovementDirection();
     }
 
     private void LeftReleased(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
         pr_XAxis += 1;
         MovementDirection();
     }
 
     private void RightReleased(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
         pr_XAxis -= 1;
         MovementDirection();
     }
@@ -199,6 +208,15 @@ public class InputInvoker : MonoBehaviour
     private void SpellRight(InputAction.CallbackContext pa_Callback)
     {
         InputEvents.InvokeSpellRight();
+    }
+
+    #endregion
+
+    #region Public Functions
+
+    public bool IdleCheck()
+    {
+        return (pr_YAxis == 0 && pr_XAxis == 0);
     }
 
     #endregion

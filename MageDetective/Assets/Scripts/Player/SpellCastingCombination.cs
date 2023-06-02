@@ -113,15 +113,15 @@ public class SpellCastingCombination : MonoBehaviour
         switch (pr_SpellComponents)
         {
             case "dr":
-                Debug.Log("Light spell casted");
+                SpellCastingEvents.InvokeLightSpell();
                 Disable();
                 break;
             case "drrud":
-                Debug.Log("UV light spell casted");
+                SpellCastingEvents.InvokeUVLightSpell();
                 Disable();
                 break;
             case "durddl":
-                Debug.Log("Reveal spell casted");
+                SpellCastingEvents.InvokeRevealSpell();
                 Disable();
                 break;
         }
