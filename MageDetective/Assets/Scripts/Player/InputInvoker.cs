@@ -7,6 +7,7 @@ public class InputInvoker : MonoBehaviour
 
     private PlayerInput pr_PlayerInput; //Action Maps
     [SerializeField] private SpellCastingMode s_SpellCastingMode;
+    [SerializeField] private NotebookMode s_NotebookMode;
 
     #endregion
 
@@ -39,6 +40,9 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Movement.Right.canceled += RightReleased;
         pr_PlayerInput.Movement.Enable();
 
+        pr_PlayerInput.Triggers.NotebookMode.started += NotebookModeToggle;
+        pr_PlayerInput.Triggers.NotebookMode.Enable();
+
         pr_PlayerInput.Triggers.SpellMode.started += SpellModeToggle;
         pr_PlayerInput.Triggers.SpellMode.Enable();
 
@@ -46,7 +50,7 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Spells.SpellDown.performed += SpellDown;
         pr_PlayerInput.Spells.SpellLeft.performed += SpellLeft;
         pr_PlayerInput.Spells.SpellRight.performed += SpellRight;
-        pr_PlayerInput.Spells.Enable();
+        pr_PlayerInput.Spells.Enable();        
     }
 
     private void OnDisable()
@@ -61,7 +65,10 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Movement.Right.canceled -= RightReleased;
         pr_PlayerInput.Movement.Disable();
 
-        pr_PlayerInput.Triggers.SpellMode.started += SpellModeToggle;
+        pr_PlayerInput.Triggers.NotebookMode.started -= NotebookModeToggle;
+        pr_PlayerInput.Triggers.NotebookMode.Disable();
+
+        pr_PlayerInput.Triggers.SpellMode.started -= SpellModeToggle;
         pr_PlayerInput.Triggers.SpellMode.Disable();
 
         pr_PlayerInput.Spells.SpellUp.performed -= SpellUp;
@@ -92,6 +99,13 @@ public class InputInvoker : MonoBehaviour
     private void LeftPressed(InputAction.CallbackContext pa_Callback)
     {
         if (s_SpellCastingMode.Mode()) return;
+
+        if (s_NotebookMode.Mode())
+        {
+            NotebookReadingEvents.InvokeNotebookPageTurnLeft();
+            return;
+        } 
+        
         pr_XAxis -= 1;
         MovementDirection();
     }
@@ -99,6 +113,13 @@ public class InputInvoker : MonoBehaviour
     private void RightPressed(InputAction.CallbackContext pa_Callback)
     {
         if (s_SpellCastingMode.Mode()) return;
+
+        if (s_NotebookMode.Mode())
+        {
+            NotebookReadingEvents.InvokeNotebookPageTurnRight();
+            return;
+        }
+
         pr_XAxis += 1;
         MovementDirection();
     }
@@ -179,6 +200,15 @@ public class InputInvoker : MonoBehaviour
                 InputEvents.InvokeMoveLeft();
             }
         }
+    }
+
+    #endregion
+
+    #region Notebook Actions
+
+    private void NotebookModeToggle(InputAction.CallbackContext pa_Callback)
+    {
+        InputEvents.InvokeNotebookModeToggle();
     }
 
     #endregion

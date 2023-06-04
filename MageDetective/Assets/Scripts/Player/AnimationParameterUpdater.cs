@@ -166,10 +166,23 @@ public class AnimationParameterUpdater : MonoBehaviour
 
     private void Awake()
     {
-        foreach (AnimatorControllerParameter l_Parameter in u_PlayerAnimator.parameters)
-        {
-            u_ParamterList.Add(l_Parameter.name);
-        }
+        u_ParamterList = new List<string>
+        { 
+            "CastingSpell",
+            "LightCasted",
+            "UVLightCasted",
+            "RevealCasted",
+            "SpellFizzle",
+            "WalkingUp",
+            "WalkingDown",
+            "WalkingLeft",
+            "WalkingRight",
+            "WalkingUpLeft",
+            "WalkingUpRight",
+            "WalkingDownLeft",
+            "WalkingDownRight",
+            "Idle"
+        };
     }
 
     private void UncheckParameters()
