@@ -135,31 +135,32 @@ public class AnimationParameterUpdater : MonoBehaviour
     private void SpellCastingModeDeactivate()
     {
         UncheckParameters();
-        u_PlayerAnimator.SetBool("CastingSpell", true);
+        u_PlayerAnimator.SetBool("CastingSpell", false);
+        u_PlayerAnimator.SetBool("Idle", true);
     }
 
     private void LightSpell()
     {
         u_PlayerAnimator.SetBool("LightCasted", true);
-        UncheckParameters();
+        u_PlayerAnimator.SetBool("CastingSpell", false);
     }
 
     private void UVLightSpell()
     {
         u_PlayerAnimator.SetBool("UVLightCasted", true);
-        UncheckParameters();
+        u_PlayerAnimator.SetBool("CastingSpell", false);
     }
 
     private void RevealSpell()
     {
         u_PlayerAnimator.SetBool("RevealCasted", true);
-        UncheckParameters();
+        u_PlayerAnimator.SetBool("CastingSpell", false);
     }
 
     private void SpellFizzle()
     {
         u_PlayerAnimator.SetBool("SpellFizzle", true);
-        UncheckParameters();
+        u_PlayerAnimator.SetBool("CastingSpell", false);
     }
 
     #endregion

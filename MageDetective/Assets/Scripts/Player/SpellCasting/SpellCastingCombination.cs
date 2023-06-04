@@ -98,6 +98,7 @@ public class SpellCastingCombination : MonoBehaviour
         {
             Debug.Log("Casting failed");
             Disable();
+            s_SpellCastingMode.SpellcastingModeDisable();
         }
     }
 
@@ -105,7 +106,6 @@ public class SpellCastingCombination : MonoBehaviour
     {
         pr_StartedCasting = false;
         pr_SpellComponents = "";
-        s_SpellCastingMode.SpellcastingModeDisable();
     }
 
     private void SpellChecks()
@@ -122,6 +122,10 @@ public class SpellCastingCombination : MonoBehaviour
                 break;
             case "durddl":
                 SpellCastingEvents.InvokeRevealSpell();
+                Disable();
+                break;
+            default:
+                SpellCastingEvents.InvokeSpellFizzle();
                 Disable();
                 break;
         }

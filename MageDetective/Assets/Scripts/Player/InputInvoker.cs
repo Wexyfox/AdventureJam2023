@@ -85,6 +85,7 @@ public class InputInvoker : MonoBehaviour
     private void UpPressed(InputAction.CallbackContext pa_Callback)
     {
         if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_YAxis += 1;
         MovementDirection();
     }
@@ -92,6 +93,7 @@ public class InputInvoker : MonoBehaviour
     private void DownPressed(InputAction.CallbackContext pa_Callback)
     {
         if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_YAxis -= 1;
         MovementDirection();
     }
@@ -127,6 +129,7 @@ public class InputInvoker : MonoBehaviour
     private void UpReleased(InputAction.CallbackContext pa_Callback)
     {
         if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_YAxis -= 1;
         MovementDirection();
     }
@@ -134,6 +137,7 @@ public class InputInvoker : MonoBehaviour
     private void DownReleased(InputAction.CallbackContext pa_Callback)
     {
         if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_YAxis += 1;
         MovementDirection();
     }
@@ -141,6 +145,7 @@ public class InputInvoker : MonoBehaviour
     private void LeftReleased(InputAction.CallbackContext pa_Callback)
     {
         if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_XAxis += 1;
         MovementDirection();
     }
@@ -148,12 +153,15 @@ public class InputInvoker : MonoBehaviour
     private void RightReleased(InputAction.CallbackContext pa_Callback)
     {
         if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_XAxis -= 1;
         MovementDirection();
     }
 
     private void MovementDirection()
     {
+        Debug.Log("X: " + pr_XAxis.ToString() + "    Y: " + pr_YAxis.ToString());
+
         if (pr_YAxis == 0 && pr_XAxis == 0)
         {
             InputEvents.InvokeMoveStop();
