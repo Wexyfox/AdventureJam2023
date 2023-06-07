@@ -191,9 +191,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Talk",
+                    "name": "NotebookMode",
                     "type": "Button",
-                    "id": "8c7fc371-b4a5-4df6-af1c-9e3dfe92391d",
+                    "id": "a50b18d2-1a54-4d89-a5d5-c4f115f704ae",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -214,12 +214,12 @@
                 },
                 {
                     "name": "",
-                    "id": "d7689557-e886-47e6-906a-7cc8121a779f",
-                    "path": "<Keyboard>/space",
+                    "id": "e71fad1b-27bc-4095-82df-fdb330930026",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Talk",
+                    "groups": "Player",
+                    "action": "NotebookMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

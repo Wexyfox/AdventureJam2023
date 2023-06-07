@@ -213,9 +213,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Talk"",
+                    ""name"": ""NotebookMode"",
                     ""type"": ""Button"",
-                    ""id"": ""8c7fc371-b4a5-4df6-af1c-9e3dfe92391d"",
+                    ""id"": ""a50b18d2-1a54-4d89-a5d5-c4f115f704ae"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -236,12 +236,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d7689557-e886-47e6-906a-7cc8121a779f"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""e71fad1b-27bc-4095-82df-fdb330930026"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Talk"",
+                    ""groups"": ""Player"",
+                    ""action"": ""NotebookMode"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -277,7 +277,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         // Triggers
         m_Triggers = asset.FindActionMap("Triggers", throwIfNotFound: true);
         m_Triggers_SpellMode = m_Triggers.FindAction("SpellMode", throwIfNotFound: true);
-        m_Triggers_Talk = m_Triggers.FindAction("Talk", throwIfNotFound: true);
+        m_Triggers_NotebookMode = m_Triggers.FindAction("NotebookMode", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -480,13 +480,13 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Triggers;
     private List<ITriggersActions> m_TriggersActionsCallbackInterfaces = new List<ITriggersActions>();
     private readonly InputAction m_Triggers_SpellMode;
-    private readonly InputAction m_Triggers_Talk;
+    private readonly InputAction m_Triggers_NotebookMode;
     public struct TriggersActions
     {
         private @PlayerInput m_Wrapper;
         public TriggersActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @SpellMode => m_Wrapper.m_Triggers_SpellMode;
-        public InputAction @Talk => m_Wrapper.m_Triggers_Talk;
+        public InputAction @NotebookMode => m_Wrapper.m_Triggers_NotebookMode;
         public InputActionMap Get() { return m_Wrapper.m_Triggers; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -499,9 +499,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpellMode.started += instance.OnSpellMode;
             @SpellMode.performed += instance.OnSpellMode;
             @SpellMode.canceled += instance.OnSpellMode;
-            @Talk.started += instance.OnTalk;
-            @Talk.performed += instance.OnTalk;
-            @Talk.canceled += instance.OnTalk;
+            @NotebookMode.started += instance.OnNotebookMode;
+            @NotebookMode.performed += instance.OnNotebookMode;
+            @NotebookMode.canceled += instance.OnNotebookMode;
         }
 
         private void UnregisterCallbacks(ITriggersActions instance)
@@ -509,9 +509,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpellMode.started -= instance.OnSpellMode;
             @SpellMode.performed -= instance.OnSpellMode;
             @SpellMode.canceled -= instance.OnSpellMode;
-            @Talk.started -= instance.OnTalk;
-            @Talk.performed -= instance.OnTalk;
-            @Talk.canceled -= instance.OnTalk;
+            @NotebookMode.started -= instance.OnNotebookMode;
+            @NotebookMode.performed -= instance.OnNotebookMode;
+            @NotebookMode.canceled -= instance.OnNotebookMode;
         }
 
         public void RemoveCallbacks(ITriggersActions instance)
@@ -555,6 +555,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     public interface ITriggersActions
     {
         void OnSpellMode(InputAction.CallbackContext context);
-        void OnTalk(InputAction.CallbackContext context);
+        void OnNotebookMode(InputAction.CallbackContext context);
     }
 }

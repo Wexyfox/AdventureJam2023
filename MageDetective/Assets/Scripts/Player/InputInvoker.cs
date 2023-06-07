@@ -6,6 +6,8 @@ public class InputInvoker : MonoBehaviour
     #region Editor Fields
 
     private PlayerInput pr_PlayerInput; //Action Maps
+    [SerializeField] private SpellCastingMode s_SpellCastingMode;
+    [SerializeField] private NotebookMode s_NotebookMode;
 
     #endregion
 
@@ -38,7 +40,11 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Movement.Right.canceled += RightReleased;
         pr_PlayerInput.Movement.Enable();
 
-        pr_PlayerInput.Triggers.SpellMode.performed += SpellModeToggle;
+        pr_PlayerInput.Triggers.NotebookMode.started += NotebookModeToggle;
+        pr_PlayerInput.Triggers.NotebookMode.Enable();
+
+        pr_PlayerInput.Triggers.SpellMode.started += SpellModeToggle;
+
         pr_PlayerInput.Triggers.SpellMode.Enable();
         pr_PlayerInput.Triggers.Talk.performed += TalkAttempt;
         pr_PlayerInput.Triggers.Talk.Enable();
@@ -48,8 +54,6 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Spells.SpellLeft.performed += SpellLeft;
         pr_PlayerInput.Spells.SpellRight.performed += SpellRight;
         pr_PlayerInput.Spells.Enable();
-
-        
     }
 
     private void OnDisable()
@@ -64,7 +68,11 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Movement.Right.canceled -= RightReleased;
         pr_PlayerInput.Movement.Disable();
 
-        pr_PlayerInput.Triggers.SpellMode.performed -= SpellModeToggle;
+        pr_PlayerInput.Triggers.NotebookMode.started -= NotebookModeToggle;
+        pr_PlayerInput.Triggers.NotebookMode.Disable();
+
+        pr_PlayerInput.Triggers.SpellMode.started -= SpellModeToggle;
+
         pr_PlayerInput.Triggers.SpellMode.Disable();
         pr_PlayerInput.Triggers.Talk.performed -= TalkAttempt;
         pr_PlayerInput.Triggers.Talk.Disable();
@@ -82,54 +90,84 @@ public class InputInvoker : MonoBehaviour
 
     private void UpPressed(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_YAxis += 1;
         MovementDirection();
     }
 
     private void DownPressed(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_YAxis -= 1;
         MovementDirection();
     }
 
     private void LeftPressed(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
+
+        if (s_NotebookMode.Mode())
+        {
+            NotebookReadingEvents.InvokeNotebookPageTurnLeft();
+            return;
+        }
+
         pr_XAxis -= 1;
         MovementDirection();
     }
 
     private void RightPressed(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
+
+        if (s_NotebookMode.Mode())
+        {
+            NotebookReadingEvents.InvokeNotebookPageTurnRight();
+            return;
+        }
+
         pr_XAxis += 1;
         MovementDirection();
     }
 
     private void UpReleased(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_YAxis -= 1;
         MovementDirection();
     }
 
     private void DownReleased(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_YAxis += 1;
         MovementDirection();
     }
 
     private void LeftReleased(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_XAxis += 1;
         MovementDirection();
     }
 
     private void RightReleased(InputAction.CallbackContext pa_Callback)
     {
+        if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
         pr_XAxis -= 1;
         MovementDirection();
     }
 
     private void MovementDirection()
     {
+        //Debug.Log("X: " + pr_XAxis.ToString() + "    Y: " + pr_YAxis.ToString());
+
         if (pr_YAxis == 0 && pr_XAxis == 0)
         {
             InputEvents.InvokeMoveStop();
@@ -180,6 +218,15 @@ public class InputInvoker : MonoBehaviour
 
     #endregion
 
+    #region Notebook Actions
+
+    private void NotebookModeToggle(InputAction.CallbackContext pa_Callback)
+    {
+        InputEvents.InvokeNotebookModeToggle();
+    }
+
+    #endregion
+
     #region Spell Actions
 
     private void SpellModeToggle(InputAction.CallbackContext pa_Callback)
@@ -209,11 +256,12 @@ public class InputInvoker : MonoBehaviour
 
     #endregion
 
-    #region Interaction Actions
 
-    private void TalkAttempt(InputAction.CallbackContext pa_Callback)
+    #region Public Functions
+
+    public bool IdleCheck()
     {
-        InputEvents.InvokeTalkAttempt();
+        return (pr_YAxis == 0 && pr_XAxis == 0);
     }
 
     #endregion
