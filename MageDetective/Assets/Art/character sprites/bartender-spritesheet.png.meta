@@ -134,7 +134,7 @@ TextureImporter:
       spriteID: b3b6685ba2c952446a7d5a0e2e15915a
       internalID: 753903465
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
@@ -155,7 +155,7 @@ TextureImporter:
       spriteID: 480941016620e6442949bbcc437ca562
       internalID: -1378914580
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
@@ -176,7 +176,7 @@ TextureImporter:
       spriteID: c5acf73567e26e84f996bf2ab9476b7d
       internalID: -561380558
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
@@ -197,7 +197,7 @@ TextureImporter:
       spriteID: 9c3c962b3d4dcaf469395130e320233b
       internalID: 264107622
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
@@ -218,7 +218,7 @@ TextureImporter:
       spriteID: cf5fd0bc9504c674c92fc6e70b1a3e3e
       internalID: 40712985
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
@@ -239,7 +239,7 @@ TextureImporter:
       spriteID: c389d147f78e3484aa125d0bd1f262a2
       internalID: -707099324
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
@@ -260,7 +260,7 @@ TextureImporter:
       spriteID: 50e0a93c356332b47a84d19dcdd7ca08
       internalID: -405086411
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     outline: []
@@ -269,7 +269,7 @@ TextureImporter:
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
-    indices: 
+    indices:
     edges: []
     weights: []
     secondaryTextures: []
@@ -281,9 +281,9 @@ TextureImporter:
       bartender-spritesheet_4: 40712985
       bartender-spritesheet_5: -707099324
       bartender-spritesheet_6: -405086411
-  spritePackingTag: 
+  spritePackingTag:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:
