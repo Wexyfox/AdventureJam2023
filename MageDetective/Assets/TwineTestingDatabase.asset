@@ -264,6 +264,36 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+  - id: 3
+    fields:
+    - title: Name
+      value: Blah
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
   locations:
   - id: 1
     fields:
@@ -9786,7 +9816,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 4
@@ -9981,61 +10011,6 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 704
-        y: 302
-        width: 160
-        height: 30
-    - id: 4
-      fields:
-      - title: Title
-        value: TutorialEnd
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Saints! She's dead!
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 4
-        destinationConversationID: 4
-        destinationDialogueID: 23
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 912
         y: 302
         width: 160
         height: 30
@@ -11042,8 +11017,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 914.2727
-        y: 386
+        x: 920.0084
+        y: 287.0989
         width: 160
         height: 30
     - id: 24
@@ -11179,7 +11154,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: TutorialEnd
+        value: Saints! She's dead!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -11197,7 +11172,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 26
         destinationConversationID: 4
-        destinationDialogueID: 4
+        destinationDialogueID: 23
         isConnector: 0
         priority: 2
       conditionsString: Variable["GertBodyFound"] == true
@@ -11488,7 +11463,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.9100001
+    canvasZoom: 0.8200002
   - id: 5
     fields:
     - title: Title
@@ -12969,7 +12944,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: '<b><i>Not sure what to think of that.<b/><i/>
 
-          
+
 
           Thank
           you for your time.'
@@ -13605,13 +13580,12 @@ MonoBehaviour:
       - title: Dialogue Text
         value: '<i>Is she playing dumb?</i>
 
-          
 
-          
 
-          We
-          have a witness who heard you and Gertrude arguing a few days prior to the
-          murder.'
+
+
+          We have a witness who
+          heard you and Gertrude arguing a few days prior to the murder.'
         type: 0
         typeString: 
       - title: Sequence
@@ -16000,7 +15974,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: '<i>Another one.</i>
 
-          
+
 
           Thanks Sara.'
         type: 0
@@ -18330,8 +18304,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.55000055
+    canvasScrollPosition: {x: 197.92159, y: 141.55807}
+    canvasZoom: 0.7000004
   - id: 6
     fields:
     - title: Title
@@ -20126,11 +20100,11 @@ MonoBehaviour:
       - title: Dialogue Text
         value: 'And if you didn''t?
 
-          
 
-          <i>Gertrude promised
-          not to tell the Aristocrats that I have mage blood. Looks like she wasn''t
-          so kind to Aria. I wonder what it''s like to be on her bad side...</i>'
+
+          <i>Gertrude promised not to tell
+          the Aristocrats that I have mage blood. Looks like she wasn''t so kind
+          to Aria. I wonder what it''s like to be on her bad side...</i>'
         type: 0
         typeString: 
       - title: Sequence
@@ -20419,10 +20393,10 @@ MonoBehaviour:
       - title: Dialogue Text
         value: '<b><i>So basically, no real alibi.</i></b>
 
-          
 
-          See
-          anything strange that night? '
+
+          See anything
+          strange that night? '
         type: 0
         typeString: 
       - title: Sequence
@@ -22463,10 +22437,10 @@ MonoBehaviour:
           even early fourties. A drop from that floor would at least make her limp
           about. But...</i>
 
-          
 
-          I can''t write that off, you''re
-          right. Her alibi is shakey.'
+
+          I can''t write that off, you''re right.
+          Her alibi is shakey.'
         type: 0
         typeString: 
       - title: Sequence
@@ -23309,7 +23283,7 @@ MonoBehaviour:
           always makes me distrustful of people. Part of me doesn''t want to suspect
           anyone here.</i>
 
-          
+
 
           Right, we can''t write him off. '
         type: 0
@@ -24598,10 +24572,10 @@ MonoBehaviour:
         value: '<i>I don''t know if I like that jump. Without a murder weapon or
           a witness, it''s a little bit weak.</i>
 
-          
 
-          I just
-          cant see Gertrude having an affair... we should talk to Henric.'
+
+          I just cant see Gertrude
+          having an affair... we should talk to Henric.'
         type: 0
         typeString: 
       - title: Sequence
@@ -26442,8 +26416,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.30999997
+    canvasScrollPosition: {x: 929.04694, y: 947.8773}
+    canvasZoom: 0.7299998
   syncInfo:
     syncActors: 0
     syncItems: 0
