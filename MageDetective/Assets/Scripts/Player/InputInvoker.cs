@@ -44,10 +44,7 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Triggers.NotebookMode.Enable();
 
         pr_PlayerInput.Triggers.SpellMode.started += SpellModeToggle;
-
         pr_PlayerInput.Triggers.SpellMode.Enable();
-        pr_PlayerInput.Triggers.Talk.performed += TalkAttempt;
-        pr_PlayerInput.Triggers.Talk.Enable();
 
         pr_PlayerInput.Spells.SpellUp.performed += SpellUp;
         pr_PlayerInput.Spells.SpellDown.performed += SpellDown;
@@ -72,10 +69,7 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Triggers.NotebookMode.Disable();
 
         pr_PlayerInput.Triggers.SpellMode.started -= SpellModeToggle;
-
         pr_PlayerInput.Triggers.SpellMode.Disable();
-        pr_PlayerInput.Triggers.Talk.performed -= TalkAttempt;
-        pr_PlayerInput.Triggers.Talk.Disable();
 
         pr_PlayerInput.Spells.SpellUp.performed -= SpellUp;
         pr_PlayerInput.Spells.SpellDown.performed -= SpellDown;
