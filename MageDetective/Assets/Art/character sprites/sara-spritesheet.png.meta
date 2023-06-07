@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef8cec2a703529b4cbf8744947f27a55
+guid: 6dcd1ce0ac303a14abd2e8537a9c66d9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gurti-sprite-sheet_0
+      name: sara-spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4359e1232c26d4389cc24b86f7bd04
-      internalID: 593462100
+      spriteID: d52b35df66925e54ebfed0464df76bda
+      internalID: 1730776925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gurti-sprite-sheet_1
+      name: sara-spritesheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffe3509384202b948887f78abb5a4168
-      internalID: 322774192
+      spriteID: aee6ef3f2bb14514d8d13cd81df3c7d8
+      internalID: -959398232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gurti-sprite-sheet_2
+      name: sara-spritesheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 737b3038fee472b489298bfb97e6041b
-      internalID: -1171921883
+      spriteID: 3f034dc853585b04d8753e6300ce8894
+      internalID: -432667893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gurti-sprite-sheet_3
+      name: sara-spritesheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4482a07207b86c9468db9ea397286091
-      internalID: -1125755021
+      spriteID: ffa100f96e7201d44a22e71be6a316bf
+      internalID: -1171313185
       vertices: []
       indices: 
       edges: []
@@ -211,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gurti-sprite-sheet_0: 593462100
-      gurti-sprite-sheet_1: 322774192
-      gurti-sprite-sheet_2: -1171921883
-      gurti-sprite-sheet_3: -1125755021
+      sara-spritesheet_0: 1730776925
+      sara-spritesheet_1: -959398232
+      sara-spritesheet_2: -432667893
+      sara-spritesheet_3: -1171313185
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

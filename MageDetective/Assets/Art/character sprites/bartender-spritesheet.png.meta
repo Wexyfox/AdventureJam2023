@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef8cec2a703529b4cbf8744947f27a55
+guid: 0e08b2fd1cc14794cb041eac88cd83f9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gurti-sprite-sheet_0
+      name: bartender-spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4359e1232c26d4389cc24b86f7bd04
-      internalID: 593462100
+      spriteID: b3b6685ba2c952446a7d5a0e2e15915a
+      internalID: 753903465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gurti-sprite-sheet_1
+      name: bartender-spritesheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffe3509384202b948887f78abb5a4168
-      internalID: 322774192
+      spriteID: 480941016620e6442949bbcc437ca562
+      internalID: -1378914580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gurti-sprite-sheet_2
+      name: bartender-spritesheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 737b3038fee472b489298bfb97e6041b
-      internalID: -1171921883
+      spriteID: c5acf73567e26e84f996bf2ab9476b7d
+      internalID: -561380558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gurti-sprite-sheet_3
+      name: bartender-spritesheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -194,8 +194,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4482a07207b86c9468db9ea397286091
-      internalID: -1125755021
+      spriteID: 9c3c962b3d4dcaf469395130e320233b
+      internalID: 264107622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bartender-spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5fd0bc9504c674c92fc6e70b1a3e3e
+      internalID: 40712985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bartender-spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c389d147f78e3484aa125d0bd1f262a2
+      internalID: -707099324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bartender-spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e0a93c356332b47a84d19dcdd7ca08
+      internalID: -405086411
       vertices: []
       indices: 
       edges: []
@@ -211,10 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gurti-sprite-sheet_0: 593462100
-      gurti-sprite-sheet_1: 322774192
-      gurti-sprite-sheet_2: -1171921883
-      gurti-sprite-sheet_3: -1125755021
+      bartender-spritesheet_0: 753903465
+      bartender-spritesheet_1: -1378914580
+      bartender-spritesheet_2: -561380558
+      bartender-spritesheet_3: 264107622
+      bartender-spritesheet_4: 40712985
+      bartender-spritesheet_5: -707099324
+      bartender-spritesheet_6: -405086411
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

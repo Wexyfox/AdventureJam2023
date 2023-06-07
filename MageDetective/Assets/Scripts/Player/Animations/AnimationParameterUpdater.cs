@@ -167,6 +167,8 @@ public class AnimationParameterUpdater : MonoBehaviour
 
     private void Awake()
     {
+        u_PlayerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+
         u_ParamterList = new List<string>
         { 
             "CastingSpell",

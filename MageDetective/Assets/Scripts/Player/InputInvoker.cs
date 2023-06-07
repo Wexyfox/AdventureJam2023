@@ -160,7 +160,7 @@ public class InputInvoker : MonoBehaviour
 
     private void MovementDirection()
     {
-        Debug.Log("X: " + pr_XAxis.ToString() + "    Y: " + pr_YAxis.ToString());
+        //Debug.Log("X: " + pr_XAxis.ToString() + "    Y: " + pr_YAxis.ToString());
 
         if (pr_YAxis == 0 && pr_XAxis == 0)
         {

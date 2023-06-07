@@ -541,12 +541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 748884599}
-  - component: {fileID: 748884598}
-  - component: {fileID: 748884604}
-  - component: {fileID: 748884600}
-  - component: {fileID: 748884601}
   - component: {fileID: 748884603}
-  - component: {fileID: 748884602}
   m_Layer: 0
   m_Name: TestingObject
   m_TagString: Untagged
@@ -554,20 +549,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &748884598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748884597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6926995c0ae684ab02359961612caf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s_SpellCastingMode: {fileID: 748884600}
-  s_NotebookMode: {fileID: 748884604}
 --- !u!4 &748884599
 Transform:
   m_ObjectHideFlags: 0
@@ -583,50 +564,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &748884600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748884597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0799fb84a8ac84986141cec2996b94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s_InputInvoker: {fileID: 748884598}
-  s_NotebookMode: {fileID: 748884604}
-  pr_SpellModeActivated: 0
---- !u!114 &748884601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748884597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba5713ab9357de24cb7274192526a2dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s_SpellCastingMode: {fileID: 748884600}
-  pr_StartedCasting: 0
-  pr_SpellComponents: 
---- !u!114 &748884602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748884597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bcb2dda8448d31459926798fc23d123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  u_PlayerAnimator: {fileID: 748884603}
-  s_SpellCastingMode: {fileID: 748884600}
 --- !u!95 &748884603
 Animator:
   serializedVersion: 5
@@ -648,21 +585,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &748884604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748884597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6c3babf81f2f474295f9406e355309f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s_InputInvoker: {fileID: 748884598}
-  s_SpellCastingMode: {fileID: 748884600}
-  pr_NotebookModeActivated: 0
 --- !u!1 &835085238
 GameObject:
   m_ObjectHideFlags: 0
