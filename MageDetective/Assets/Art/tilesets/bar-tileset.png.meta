@@ -582,7 +582,7 @@ TextureImporter:
       name: bar-tileset_22
       rect:
         serializedVersion: 2
-        x: 352
+        x: 320
         y: 96
         width: 32
         height: 32
@@ -603,8 +603,8 @@ TextureImporter:
       name: bar-tileset_23
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 352
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -624,7 +624,7 @@ TextureImporter:
       name: bar-tileset_24
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 64
         width: 32
         height: 32
@@ -645,7 +645,7 @@ TextureImporter:
       name: bar-tileset_25
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 64
         width: 32
         height: 32
@@ -666,7 +666,7 @@ TextureImporter:
       name: bar-tileset_26
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 64
         width: 32
         height: 32
@@ -687,7 +687,7 @@ TextureImporter:
       name: bar-tileset_27
       rect:
         serializedVersion: 2
-        x: 160
+        x: 128
         y: 64
         width: 32
         height: 32
@@ -708,7 +708,7 @@ TextureImporter:
       name: bar-tileset_28
       rect:
         serializedVersion: 2
-        x: 192
+        x: 160
         y: 64
         width: 32
         height: 32
@@ -729,7 +729,7 @@ TextureImporter:
       name: bar-tileset_29
       rect:
         serializedVersion: 2
-        x: 224
+        x: 192
         y: 64
         width: 32
         height: 32
@@ -750,7 +750,7 @@ TextureImporter:
       name: bar-tileset_30
       rect:
         serializedVersion: 2
-        x: 256
+        x: 224
         y: 64
         width: 32
         height: 32
@@ -771,7 +771,7 @@ TextureImporter:
       name: bar-tileset_31
       rect:
         serializedVersion: 2
-        x: 288
+        x: 256
         y: 64
         width: 32
         height: 32
@@ -792,7 +792,7 @@ TextureImporter:
       name: bar-tileset_32
       rect:
         serializedVersion: 2
-        x: 320
+        x: 288
         y: 64
         width: 32
         height: 32
@@ -813,8 +813,8 @@ TextureImporter:
       name: bar-tileset_33
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 320
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -834,8 +834,8 @@ TextureImporter:
       name: bar-tileset_34
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 352
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -855,7 +855,7 @@ TextureImporter:
       name: bar-tileset_35
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 32
         width: 32
         height: 32
@@ -876,7 +876,7 @@ TextureImporter:
       name: bar-tileset_36
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 32
         width: 32
         height: 32
@@ -897,7 +897,7 @@ TextureImporter:
       name: bar-tileset_37
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 32
         width: 32
         height: 32
@@ -918,7 +918,7 @@ TextureImporter:
       name: bar-tileset_38
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 32
         width: 32
         height: 32
@@ -939,7 +939,7 @@ TextureImporter:
       name: bar-tileset_39
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 32
         width: 32
         height: 32
@@ -960,7 +960,7 @@ TextureImporter:
       name: bar-tileset_40
       rect:
         serializedVersion: 2
-        x: 224
+        x: 160
         y: 32
         width: 32
         height: 32
@@ -981,7 +981,7 @@ TextureImporter:
       name: bar-tileset_41
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 32
         width: 32
         height: 32
@@ -1002,7 +1002,7 @@ TextureImporter:
       name: bar-tileset_42
       rect:
         serializedVersion: 2
-        x: 288
+        x: 224
         y: 32
         width: 32
         height: 32
@@ -1023,8 +1023,8 @@ TextureImporter:
       name: bar-tileset_43
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 256
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -1044,8 +1044,8 @@ TextureImporter:
       name: bar-tileset_44
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 288
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -1065,8 +1065,8 @@ TextureImporter:
       name: bar-tileset_45
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 320
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -1086,8 +1086,8 @@ TextureImporter:
       name: bar-tileset_46
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 352
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -1107,7 +1107,7 @@ TextureImporter:
       name: bar-tileset_47
       rect:
         serializedVersion: 2
-        x: 160
+        x: 0
         y: 0
         width: 32
         height: 32
@@ -1128,7 +1128,7 @@ TextureImporter:
       name: bar-tileset_48
       rect:
         serializedVersion: 2
-        x: 192
+        x: 32
         y: 0
         width: 32
         height: 32
@@ -1149,7 +1149,7 @@ TextureImporter:
       name: bar-tileset_49
       rect:
         serializedVersion: 2
-        x: 224
+        x: 96
         y: 0
         width: 32
         height: 32
@@ -1170,7 +1170,7 @@ TextureImporter:
       name: bar-tileset_50
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 0
         width: 32
         height: 32
@@ -1191,7 +1191,7 @@ TextureImporter:
       name: bar-tileset_51
       rect:
         serializedVersion: 2
-        x: 288
+        x: 160
         y: 0
         width: 32
         height: 32
@@ -1204,6 +1204,132 @@ TextureImporter:
       bones: []
       spriteID: c5bf26f49222a584caaee600212a9e7d
       internalID: 1351249051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar-tileset_52
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be5421556cdf904fbdc05560c80408c
+      internalID: 79982126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar-tileset_53
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc107ccedcf59f047a4dd0cb17092172
+      internalID: -1511663512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar-tileset_54
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9264ebeb66981ab46b2d2e3f3305f4ff
+      internalID: -198644642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar-tileset_55
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032dd092609fd404d88f48acaad29cc7
+      internalID: 2027487485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar-tileset_56
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba2e35d25384fc48b09145efb0fc73d
+      internalID: 1636375022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar-tileset_57
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6dea847ab03f646978822ea27e9009
+      internalID: -1405519422
       vertices: []
       indices: 
       edges: []
@@ -1267,6 +1393,12 @@ TextureImporter:
       bar-tileset_5: -916141872
       bar-tileset_50: 282086573
       bar-tileset_51: 1351249051
+      bar-tileset_52: 79982126
+      bar-tileset_53: -1511663512
+      bar-tileset_54: -198644642
+      bar-tileset_55: 2027487485
+      bar-tileset_56: 1636375022
+      bar-tileset_57: -1405519422
       bar-tileset_6: 499423595
       bar-tileset_7: -1782520313
       bar-tileset_8: 1825916340
