@@ -114,7 +114,7 @@ MonoBehaviour:
     - title: Name
       value: Ratholomew
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -122,7 +122,7 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: IsPlayer
       value: False
       type: 2
@@ -130,7 +130,7 @@ MonoBehaviour:
     - title: NodeColor
       value: '#83b956ff'
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -267,7 +267,7 @@ MonoBehaviour:
   - id: 3
     fields:
     - title: Name
-      value: Blah
+      value: 
       type: 0
       typeString: 
     - title: Pictures
@@ -292,6 +292,24 @@ MonoBehaviour:
       typeString: 
     - title: Is Item
       value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+  - id: 4
+    fields:
+    - title: Name
+      value: Gertude's Book
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Is Item
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
   locations:
@@ -10093,8 +10111,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Now where'd we leave off last time? Right... light spells. Light is
-          elementary to magic. Watch closely...
+        value: 'Now where''d we leave off last time? Right... light spells. Light
+          is elementary to magic. You should pick it up. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -11174,7 +11192,7 @@ MonoBehaviour:
         destinationDialogueID: 23
         isConnector: 0
         priority: 2
-      conditionsString: Variable["GertBodyFound"] == true
+      conditionsString: Variable["GetBook"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -11464,8 +11482,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 0, y: 77.647095}
+    canvasZoom: 0.85000014
   - id: 5
     fields:
     - title: Title
