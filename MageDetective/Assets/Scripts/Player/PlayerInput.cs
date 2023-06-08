@@ -220,6 +220,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interaction"",
+                    ""type"": ""Button"",
+                    ""id"": ""6502cddf-a807-475f-9144-30528d165247"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -242,6 +251,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Player"",
                     ""action"": ""NotebookMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d323b098-92a6-4fe2-8103-997c374f61d0"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interaction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -278,6 +298,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Triggers = asset.FindActionMap("Triggers", throwIfNotFound: true);
         m_Triggers_SpellMode = m_Triggers.FindAction("SpellMode", throwIfNotFound: true);
         m_Triggers_NotebookMode = m_Triggers.FindAction("NotebookMode", throwIfNotFound: true);
+        m_Triggers_Interaction = m_Triggers.FindAction("Interaction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -481,12 +502,14 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private List<ITriggersActions> m_TriggersActionsCallbackInterfaces = new List<ITriggersActions>();
     private readonly InputAction m_Triggers_SpellMode;
     private readonly InputAction m_Triggers_NotebookMode;
+    private readonly InputAction m_Triggers_Interaction;
     public struct TriggersActions
     {
         private @PlayerInput m_Wrapper;
         public TriggersActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @SpellMode => m_Wrapper.m_Triggers_SpellMode;
         public InputAction @NotebookMode => m_Wrapper.m_Triggers_NotebookMode;
+        public InputAction @Interaction => m_Wrapper.m_Triggers_Interaction;
         public InputActionMap Get() { return m_Wrapper.m_Triggers; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -502,6 +525,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @NotebookMode.started += instance.OnNotebookMode;
             @NotebookMode.performed += instance.OnNotebookMode;
             @NotebookMode.canceled += instance.OnNotebookMode;
+            @Interaction.started += instance.OnInteraction;
+            @Interaction.performed += instance.OnInteraction;
+            @Interaction.canceled += instance.OnInteraction;
         }
 
         private void UnregisterCallbacks(ITriggersActions instance)
@@ -512,6 +538,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @NotebookMode.started -= instance.OnNotebookMode;
             @NotebookMode.performed -= instance.OnNotebookMode;
             @NotebookMode.canceled -= instance.OnNotebookMode;
+            @Interaction.started -= instance.OnInteraction;
+            @Interaction.performed -= instance.OnInteraction;
+            @Interaction.canceled -= instance.OnInteraction;
         }
 
         public void RemoveCallbacks(ITriggersActions instance)
@@ -556,5 +585,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     {
         void OnSpellMode(InputAction.CallbackContext context);
         void OnNotebookMode(InputAction.CallbackContext context);
+        void OnInteraction(InputAction.CallbackContext context);
     }
 }
