@@ -30,6 +30,9 @@ public class InputInvoker : MonoBehaviour
 
     private void OnEnable()
     {
+        InputEvents.EnableInputs += EnableInputs;
+        InputEvents.DisableInputs += DisableInputs;
+
         pr_PlayerInput.Movement.Up.performed += UpPressed;
         pr_PlayerInput.Movement.Down.performed += DownPressed;
         pr_PlayerInput.Movement.Left.performed += LeftPressed;
@@ -58,6 +61,9 @@ public class InputInvoker : MonoBehaviour
 
     private void OnDisable()
     {
+        InputEvents.EnableInputs -= EnableInputs;
+        InputEvents.DisableInputs -= DisableInputs;
+
         pr_PlayerInput.Movement.Up.performed -= UpPressed;
         pr_PlayerInput.Movement.Down.performed -= DownPressed;
         pr_PlayerInput.Movement.Left.performed -= LeftPressed;
@@ -262,6 +268,42 @@ public class InputInvoker : MonoBehaviour
         if (s_NotebookMode.Mode()) return;
         InteractionEvents.InvokeInteractionAttempt();
     }
+
+    #region Enable Disable Actions
+
+    private void EnableInputs()
+    {
+        pr_XAxis = 0;
+        pr_YAxis = 0;
+
+        pr_PlayerInput.Movement.Up.performed += UpPressed;
+        pr_PlayerInput.Movement.Down.performed += DownPressed;
+        pr_PlayerInput.Movement.Left.performed += LeftPressed;
+        pr_PlayerInput.Movement.Right.performed += RightPressed;
+        pr_PlayerInput.Movement.Up.canceled += UpReleased;
+        pr_PlayerInput.Movement.Down.canceled += DownReleased;
+        pr_PlayerInput.Movement.Left.canceled += LeftReleased;
+        pr_PlayerInput.Movement.Right.canceled += RightReleased;
+    }
+
+    private void DisableInputs()
+    {
+        pr_PlayerInput.Movement.Up.performed -= UpPressed;
+        pr_PlayerInput.Movement.Down.performed -= DownPressed;
+        pr_PlayerInput.Movement.Left.performed -= LeftPressed;
+        pr_PlayerInput.Movement.Right.performed -= RightPressed;
+        pr_PlayerInput.Movement.Up.canceled -= UpReleased;
+        pr_PlayerInput.Movement.Down.canceled -= DownReleased;
+        pr_PlayerInput.Movement.Left.canceled -= LeftReleased;
+        pr_PlayerInput.Movement.Right.canceled -= RightReleased;
+
+        pr_XAxis = 0;
+        pr_YAxis = 0;
+
+        InputEvents.InvokeMoveStop();
+    }
+
+    #endregion
 
     #region Public Functions
 
