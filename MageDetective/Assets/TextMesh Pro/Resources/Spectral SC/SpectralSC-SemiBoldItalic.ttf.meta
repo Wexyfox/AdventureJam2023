@@ -1,0 +1,45 @@
+fileFormatVersion: 2
+guid: 2aa68bd4c49c5464384bf6b3101fb015
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Spectral SC
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e417803e269ce134985e554122f00401, type: 3}
+  - {fileID: 12800000, guid: 020637236bab7a24d945ecc2142f03ad, type: 3}
+  - {fileID: 12800000, guid: 38635a71be5593e44a54c8328743cff3, type: 3}
+  - {fileID: 12800000, guid: d23663a4f74b5db48813ce5b44fadcf5, type: 3}
+  - {fileID: 12800000, guid: c01a20b797128834fa3d530c14adb060, type: 3}
+  - {fileID: 12800000, guid: 59eac03e34b01254cae4b5a5e414bc57, type: 3}
+  - {fileID: 12800000, guid: 9740ee4c975a9ba4eb5095415529bdb0, type: 3}
+  - {fileID: 12800000, guid: 922a4b3f75c722846b8f505b30c0661e, type: 3}
+  - {fileID: 12800000, guid: f8e21d3d51424ba49bcf72dd7f1bf863, type: 3}
+  - {fileID: 12800000, guid: 275ec7b3ead985b42806a72f15a96d3a, type: 3}
+  - {fileID: 12800000, guid: 6dab89c8b149e274d9ee46053b74ae65, type: 3}
+  - {fileID: 12800000, guid: 8165482679cf21f4eb70be347270dbc0, type: 3}
+  - {fileID: 12800000, guid: 54b64e667bbcc2a49bfb33e56727ffe4, type: 3}
+  - {fileID: 12800000, guid: 935f0121ebb2e2341bcfb83a1900a8bf, type: 3}
+  - {fileID: 12800000, guid: 4f5ec3a64db127d48a014bea0beee47e, type: 3}
+  - {fileID: 12800000, guid: e4506674bf4380b4c9650526e33f2dfa, type: 3}
+  - {fileID: 12800000, guid: 095f45598067c0c4dbca5845295f50b6, type: 3}
+  - {fileID: 12800000, guid: 0355ea8d9400c4c4484a39e800ea7087, type: 3}
+  - {fileID: 12800000, guid: e67728a43ef9f8f45aa438e8057a6702, type: 3}
+  - {fileID: 12800000, guid: 9ef1e3e1bbda11c49b01a36aba9fef5d, type: 3}
+  - {fileID: 12800000, guid: 351d8677592ba8848b95ecaf2ac2cb02, type: 3}
+  - {fileID: 12800000, guid: 44fbc07f118d79449a2378e48275e045, type: 3}
+  - {fileID: 12800000, guid: c7383df28e846cd44a17c59c52b45b49, type: 3}
+  - {fileID: 12800000, guid: 7e37d77f3bf6b46499a4eb9ed2685bf3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
