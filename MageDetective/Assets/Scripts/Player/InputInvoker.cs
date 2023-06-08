@@ -46,6 +46,9 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Triggers.SpellMode.started += SpellModeToggle;
         pr_PlayerInput.Triggers.SpellMode.Enable();
 
+        pr_PlayerInput.Triggers.Interaction.started += InteractionAttempt;
+        pr_PlayerInput.Triggers.Interaction.Enable();
+
         pr_PlayerInput.Spells.SpellUp.performed += SpellUp;
         pr_PlayerInput.Spells.SpellDown.performed += SpellDown;
         pr_PlayerInput.Spells.SpellLeft.performed += SpellLeft;
@@ -70,6 +73,9 @@ public class InputInvoker : MonoBehaviour
 
         pr_PlayerInput.Triggers.SpellMode.started -= SpellModeToggle;
         pr_PlayerInput.Triggers.SpellMode.Disable();
+
+        pr_PlayerInput.Triggers.Interaction.started -= InteractionAttempt;
+        pr_PlayerInput.Triggers.Interaction.Disable();
 
         pr_PlayerInput.Spells.SpellUp.performed -= SpellUp;
         pr_PlayerInput.Spells.SpellDown.performed -= SpellDown;
@@ -250,6 +256,12 @@ public class InputInvoker : MonoBehaviour
 
     #endregion
 
+    private void InteractionAttempt(InputAction.CallbackContext pa_Callback)
+    {
+        if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
+        InteractionEvents.InvokeInteractionAttempt();
+    }
 
     #region Public Functions
 

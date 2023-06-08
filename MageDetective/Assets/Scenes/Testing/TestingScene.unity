@@ -621,7 +621,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 3a9b7dd8b1f44054fb0707f7a7a20e41, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 1fdcf873307b30e45b9c7b9790b1f715, type: 2}
 --- !u!4 &835085240
 Transform:
   m_ObjectHideFlags: 0
@@ -827,6 +827,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2103792203}
   - component: {fileID: 2103792204}
+  - component: {fileID: 2103792206}
+  - component: {fileID: 2103792205}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -842,7 +844,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103792202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -861,7 +863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 16
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -922,6 +924,60 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: 1fdcf873307b30e45b9c7b9790b1f715, type: 2}
+--- !u!114 &2103792205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103792202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe01560b1e3cb241b2cd1c7701acb98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractedWith:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2103792204}
+        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.DialogueSystemTrigger,
+          Assembly-CSharp-firstpass
+        m_MethodName: OnUse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!61 &2103792206
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103792202}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &2105657921
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,6 +989,8 @@ GameObject:
   - component: {fileID: 2105657924}
   - component: {fileID: 2105657923}
   - component: {fileID: 2105657922}
+  - component: {fileID: 2105657926}
+  - component: {fileID: 2105657925}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -953,7 +1011,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0043112785, y: 0.015089363}
+  m_Offset: {x: -0.0007022768, y: -0.056771792}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -964,7 +1022,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1906626, y: 0.28982127}
+  m_Size: {x: 0.30764595, y: 0.105990425}
   m_EdgeRadius: 0
 --- !u!212 &2105657923
 SpriteRenderer:
@@ -1033,6 +1091,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2105657925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105657921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08f96fec9cc71b42b84d41138c56904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2105657926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105657921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe01560b1e3cb241b2cd1c7701acb98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractedWith:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2105657925}
+        m_TargetAssemblyTypeName: DebugLog, Assembly-CSharp
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: This has been interacted with
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &5579604800128043834
 PrefabInstance:
   m_ObjectHideFlags: 0
