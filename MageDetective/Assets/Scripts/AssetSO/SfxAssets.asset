@@ -12,5 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd2c5cc649adb1489e464e86f9fa589, type: 3}
   m_Name: SfxAssets
   m_EditorClassIdentifier: 
-  SfxClips: []
-  pr_DefaultSfxClip: {fileID: 0}
+  SfxClips:
+  - pu_SfxClipName: ui_book_open
+    pu_SfxClipFile: {fileID: 8300000, guid: 08dea58d0a020514ebc2ceaa3a9a1274, type: 3}
+  - pu_SfxClipName: ui_book_close
+    pu_SfxClipFile: {fileID: 8300000, guid: 2f7b8c93f4aa68842a86f39773cc780b, type: 3}
+  - pu_SfxClipName: spell_reveal_magic
+    pu_SfxClipFile: {fileID: 8300000, guid: dc18081a9f0037848a393e0e778f77f5, type: 3}
+  - pu_SfxClipName: spell_light
+    pu_SfxClipFile: {fileID: 8300000, guid: 2c1027beb16106e468f37346b8afbedc, type: 3}
+  - pu_SfxClipName: journal_update_alert
+    pu_SfxClipFile: {fileID: 8300000, guid: d54b6db1f6136794885dcaa9b51a6c49, type: 3}
+  - pu_SfxClipName: dialogue_information_receive
+    pu_SfxClipFile: {fileID: 8300000, guid: e3abcbf04ce75b347a2e10254bacbb95, type: 3}
+  - pu_SfxClipName: clue_found_item_alert
+    pu_SfxClipFile: {fileID: 8300000, guid: 285f53f5dd806df49b21131674cb9163, type: 3}
+  - pu_SfxClipName: clue_found_character_alert
+    pu_SfxClipFile: {fileID: 8300000, guid: 56fd8971d643aa74aad25bf5e6a35db8, type: 3}
+  - pu_SfxClipName: clue_found_character_alert
+    pu_SfxClipFile: {fileID: 8300000, guid: 56fd8971d643aa74aad25bf5e6a35db8, type: 3}
+  pr_DefaultSfxClip: {fileID: 8300000, guid: bc305f2b491cb854a8e5437fb602ba25, type: 3}

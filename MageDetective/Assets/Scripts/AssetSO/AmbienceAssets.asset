@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc88c409b82f4244a54b2416fa1d736, type: 3}
   m_Name: AmbienceAssets
   m_EditorClassIdentifier: 
-  AmbienceTracks: []
-  pr_DefaultAmbience: {fileID: 0}
+  AmbienceTracks:
+  - pu_AmbienceTrackName: ambience_marigold
+    pu_AmbienceTrackFile: {fileID: 8300000, guid: 40f2fbf3b1d0b2c4aad803cfa4f9a33c, type: 3}
+  - pu_AmbienceTrackName: ambience_potion_store
+    pu_AmbienceTrackFile: {fileID: 8300000, guid: eb27d9b7900694b4ba5af4fcb0a759fe, type: 3}
+  - pu_AmbienceTrackName: ambience_inn
+    pu_AmbienceTrackFile: {fileID: 8300000, guid: 77a3a8ccd679d76468832e8f25761402, type: 3}
+  - pu_AmbienceTrackName: ambience_underground
+    pu_AmbienceTrackFile: {fileID: 8300000, guid: 127cbaf63d14d874f95d8bc3eea45078, type: 3}
+  pr_DefaultAmbience: {fileID: 8300000, guid: bc305f2b491cb854a8e5437fb602ba25, type: 3}

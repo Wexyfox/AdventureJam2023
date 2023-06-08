@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0873035e76fded845875d4c3540da87b, type: 3}
   m_Name: MusicAssets
   m_EditorClassIdentifier: 
-  MusicTracks: []
-  pr_DefaultMusic: {fileID: 0}
+  MusicTracks:
+  - pu_MusicTrackName: music_marigold
+    pu_MusicTrackFile: {fileID: 8300000, guid: a380925fc49f26d48bb27386dacc36d7, type: 3}
+  - pu_MusicTrackName: music_menu
+    pu_MusicTrackFile: {fileID: 8300000, guid: 653514b47d55dc944a03bdfe5ed19492, type: 3}
+  - pu_MusicTrackName: music_tutorial
+    pu_MusicTrackFile: {fileID: 8300000, guid: e20f69b2146f6504fb4918cce88219ca, type: 3}
+  pr_DefaultMusic: {fileID: 8300000, guid: bc305f2b491cb854a8e5437fb602ba25, type: 3}
