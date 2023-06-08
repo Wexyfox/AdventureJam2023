@@ -69,6 +69,17 @@ public static class InputEvents
 
     #endregion
 
+    #region Notebook Events
+
+    public static event UnityAction NotebookModeToggle;
+
+    public static void InvokeNotebookModeToggle()
+    {
+        NotebookModeToggle?.Invoke();
+    }
+
+    #endregion
+
     #region Spell Events
 
     public static event UnityAction SpellcastingModeToggle;
@@ -104,6 +115,17 @@ public static class InputEvents
     public static void InvokeSpellRight()
     {
         SpellRight?.Invoke();
+    }
+
+    #endregion
+
+    #region Interaction Events
+
+    public static event UnityAction TalkAttempt;
+
+    public static void InvokeTalkAttempt()
+    {
+        TalkAttempt?.Invoke();
     }
 
     #endregion

@@ -211,6 +211,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NotebookMode"",
+                    ""type"": ""Button"",
+                    ""id"": ""a50b18d2-1a54-4d89-a5d5-c4f115f704ae"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -222,6 +231,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Player"",
                     ""action"": ""SpellMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e71fad1b-27bc-4095-82df-fdb330930026"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player"",
+                    ""action"": ""NotebookMode"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -257,6 +277,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         // Triggers
         m_Triggers = asset.FindActionMap("Triggers", throwIfNotFound: true);
         m_Triggers_SpellMode = m_Triggers.FindAction("SpellMode", throwIfNotFound: true);
+        m_Triggers_NotebookMode = m_Triggers.FindAction("NotebookMode", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -459,11 +480,13 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Triggers;
     private List<ITriggersActions> m_TriggersActionsCallbackInterfaces = new List<ITriggersActions>();
     private readonly InputAction m_Triggers_SpellMode;
+    private readonly InputAction m_Triggers_NotebookMode;
     public struct TriggersActions
     {
         private @PlayerInput m_Wrapper;
         public TriggersActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @SpellMode => m_Wrapper.m_Triggers_SpellMode;
+        public InputAction @NotebookMode => m_Wrapper.m_Triggers_NotebookMode;
         public InputActionMap Get() { return m_Wrapper.m_Triggers; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -476,6 +499,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpellMode.started += instance.OnSpellMode;
             @SpellMode.performed += instance.OnSpellMode;
             @SpellMode.canceled += instance.OnSpellMode;
+            @NotebookMode.started += instance.OnNotebookMode;
+            @NotebookMode.performed += instance.OnNotebookMode;
+            @NotebookMode.canceled += instance.OnNotebookMode;
         }
 
         private void UnregisterCallbacks(ITriggersActions instance)
@@ -483,6 +509,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpellMode.started -= instance.OnSpellMode;
             @SpellMode.performed -= instance.OnSpellMode;
             @SpellMode.canceled -= instance.OnSpellMode;
+            @NotebookMode.started -= instance.OnNotebookMode;
+            @NotebookMode.performed -= instance.OnNotebookMode;
+            @NotebookMode.canceled -= instance.OnNotebookMode;
         }
 
         public void RemoveCallbacks(ITriggersActions instance)
@@ -526,5 +555,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     public interface ITriggersActions
     {
         void OnSpellMode(InputAction.CallbackContext context);
+        void OnNotebookMode(InputAction.CallbackContext context);
     }
 }
