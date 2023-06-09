@@ -163,13 +163,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943175}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 556528732}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &943179
 MonoBehaviour:
@@ -984,6 +984,7 @@ Transform:
   - {fileID: 1098820308}
   - {fileID: 1044689498}
   - {fileID: 256126502}
+  - {fileID: 943178}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11898,6 +11899,8 @@ GameObject:
   - component: {fileID: 1282029193}
   - component: {fileID: 1282029194}
   - component: {fileID: 1282029195}
+  - component: {fileID: 1282029197}
+  - component: {fileID: 1282029196}
   m_Layer: 0
   m_Name: FoundBook
   m_TagString: Untagged
@@ -12005,7 +12008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -12059,16 +12062,7 @@ MonoBehaviour:
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
   pauseGameDuringConversation: 0
-  setActiveActions:
-  - condition:
-      luaConditions: []
-      questConditions: []
-      acceptedTags: []
-      acceptedGameObjects: []
-      luaWizardIndex: 0
-      lastEvaluationValue: 0
-    target: {fileID: 1282029192}
-    state: 1
+  setActiveActions: []
   setEnabledActions: []
   setAnimatorStateActions: []
   onExecute:
@@ -12104,6 +12098,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27040195, y: 0.3999075}
   m_EdgeRadius: 0
+--- !u!114 &1282029196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282029189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe01560b1e3cb241b2cd1c7701acb98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractedWith:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0619dd65ce2bc9e42addc672a68672b5, type: 2}
+        m_TargetAssemblyTypeName: GertDead, Assembly-CSharp
+        m_MethodName: SetGertDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!50 &1282029197
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282029189}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1381094506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19620,7 +19662,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3949064531789967075, guid: 98f041c4ba900b04d94c6781d6d7a5c3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5579604798495186361, guid: 98f041c4ba900b04d94c6781d6d7a5c3, type: 3}
       propertyPath: m_Name
@@ -19676,7 +19718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9169273142054914296, guid: 98f041c4ba900b04d94c6781d6d7a5c3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f041c4ba900b04d94c6781d6d7a5c3, type: 3}

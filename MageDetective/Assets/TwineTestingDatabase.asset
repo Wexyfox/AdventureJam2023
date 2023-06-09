@@ -9325,7 +9325,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: Variable["GetBook"] == true
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9380,7 +9380,7 @@ MonoBehaviour:
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
-      conditionsString: Variable["GetBook"] == true
+      conditionsString: 
       userScript: Variable["GertBodyFound"] = true
       onExecute:
         m_PersistentCalls:

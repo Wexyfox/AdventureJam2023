@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InteractionInvoker : MonoBehaviour
 {
-    private InteractorListener s_InteractorListener;
+    [SerializeField] private InteractorListener s_InteractorListener;
 
     private void OnEnable()
     {

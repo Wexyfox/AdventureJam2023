@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class FadingImage : MonoBehaviour
 {
     [SerializeField] private Image u_Image;
+    [SerializeField] private GameObject g_CanvasObject;
 
     private float pr_MillisecondDelay = 25;
 
@@ -32,10 +33,12 @@ public class FadingImage : MonoBehaviour
             l_TempMilliSeconds -= pr_MillisecondDelay;
             await Task.Delay((int)pr_MillisecondDelay);
         }
+        g_CanvasObject.SetActive(false);
     }
 
     private async void FadeOut()
     {
+        g_CanvasObject.SetActive(true);
         float l_TempMilliSeconds = 0;
         while (l_TempMilliSeconds < 2000)
         {
