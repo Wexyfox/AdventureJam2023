@@ -30,6 +30,9 @@ public class InputInvoker : MonoBehaviour
 
     private void OnEnable()
     {
+        InputEvents.EnableInputs += EnableInputs;
+        InputEvents.DisableInputs += DisableInputs;
+
         pr_PlayerInput.Movement.Up.performed += UpPressed;
         pr_PlayerInput.Movement.Down.performed += DownPressed;
         pr_PlayerInput.Movement.Left.performed += LeftPressed;
@@ -46,6 +49,9 @@ public class InputInvoker : MonoBehaviour
         pr_PlayerInput.Triggers.SpellMode.started += SpellModeToggle;
         pr_PlayerInput.Triggers.SpellMode.Enable();
 
+        pr_PlayerInput.Triggers.Interaction.started += InteractionAttempt;
+        pr_PlayerInput.Triggers.Interaction.Enable();
+
         pr_PlayerInput.Spells.SpellUp.performed += SpellUp;
         pr_PlayerInput.Spells.SpellDown.performed += SpellDown;
         pr_PlayerInput.Spells.SpellLeft.performed += SpellLeft;
@@ -55,6 +61,9 @@ public class InputInvoker : MonoBehaviour
 
     private void OnDisable()
     {
+        InputEvents.EnableInputs -= EnableInputs;
+        InputEvents.DisableInputs -= DisableInputs;
+
         pr_PlayerInput.Movement.Up.performed -= UpPressed;
         pr_PlayerInput.Movement.Down.performed -= DownPressed;
         pr_PlayerInput.Movement.Left.performed -= LeftPressed;
@@ -70,6 +79,9 @@ public class InputInvoker : MonoBehaviour
 
         pr_PlayerInput.Triggers.SpellMode.started -= SpellModeToggle;
         pr_PlayerInput.Triggers.SpellMode.Disable();
+
+        pr_PlayerInput.Triggers.Interaction.started -= InteractionAttempt;
+        pr_PlayerInput.Triggers.Interaction.Disable();
 
         pr_PlayerInput.Spells.SpellUp.performed -= SpellUp;
         pr_PlayerInput.Spells.SpellDown.performed -= SpellDown;
@@ -250,6 +262,48 @@ public class InputInvoker : MonoBehaviour
 
     #endregion
 
+    private void InteractionAttempt(InputAction.CallbackContext pa_Callback)
+    {
+        if (s_SpellCastingMode.Mode()) return;
+        if (s_NotebookMode.Mode()) return;
+        InteractionEvents.InvokeInteractionAttempt();
+    }
+
+    #region Enable Disable Actions
+
+    private void EnableInputs()
+    {
+        pr_XAxis = 0;
+        pr_YAxis = 0;
+
+        pr_PlayerInput.Movement.Up.performed += UpPressed;
+        pr_PlayerInput.Movement.Down.performed += DownPressed;
+        pr_PlayerInput.Movement.Left.performed += LeftPressed;
+        pr_PlayerInput.Movement.Right.performed += RightPressed;
+        pr_PlayerInput.Movement.Up.canceled += UpReleased;
+        pr_PlayerInput.Movement.Down.canceled += DownReleased;
+        pr_PlayerInput.Movement.Left.canceled += LeftReleased;
+        pr_PlayerInput.Movement.Right.canceled += RightReleased;
+    }
+
+    private void DisableInputs()
+    {
+        pr_PlayerInput.Movement.Up.performed -= UpPressed;
+        pr_PlayerInput.Movement.Down.performed -= DownPressed;
+        pr_PlayerInput.Movement.Left.performed -= LeftPressed;
+        pr_PlayerInput.Movement.Right.performed -= RightPressed;
+        pr_PlayerInput.Movement.Up.canceled -= UpReleased;
+        pr_PlayerInput.Movement.Down.canceled -= DownReleased;
+        pr_PlayerInput.Movement.Left.canceled -= LeftReleased;
+        pr_PlayerInput.Movement.Right.canceled -= RightReleased;
+
+        pr_XAxis = 0;
+        pr_YAxis = 0;
+
+        InputEvents.InvokeMoveStop();
+    }
+
+    #endregion
 
     #region Public Functions
 

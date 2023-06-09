@@ -129,4 +129,20 @@ public static class InputEvents
     }
 
     #endregion
+
+    #region Enable Disable Events
+
+    public static event UnityAction EnableInputs;
+    public static void InvokeEnableInputs()
+    {
+        EnableInputs?.Invoke();
+    }
+
+    public static event UnityAction DisableInputs;
+    public static void InvokeDisableInputs()
+    {
+        DisableInputs?.Invoke();
+    }
+
+    #endregion
 }
