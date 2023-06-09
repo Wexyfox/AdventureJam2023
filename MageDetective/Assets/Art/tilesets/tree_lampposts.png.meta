@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8f7998fa999bd8e4486f4d920d8071d2
+guid: 64b0d86f05899a948a6467aacf29a4fc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,13 +117,76 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aria-spritesheet_0
+      name: tree_lampposts_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9a72966786c6542998c20f0d06241c
+      internalID: -1905364419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_lampposts_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c535810cdc63740901de768cb2391d
+      internalID: -568607700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_lampposts_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7903a1a831ef604db43f9918d55e1f1
+      internalID: 1006871773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_lampposts_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 944c183af1d4c4947bc873be2d33f407
-      internalID: 977361859
+      spriteID: b114fcafed6acfe41b10cf5bbe3ef7ff
+      internalID: 938200807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aria-spritesheet_1
+      name: tree_lampposts_4
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4928de5439fb4440a9bbf5f3375c62a
-      internalID: -2137019525
+      spriteID: ddcabb73d58097b49a1842a5e0e06a31
+      internalID: -1893800297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aria-spritesheet_2
+      name: tree_lampposts_5
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,29 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd1cdbe2bb8b56e4ebc170609b11e123
-      internalID: 1746859501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aria-spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6735a2a7e5184448b8d22a6f8b6bd2e
-      internalID: -1804955222
+      spriteID: f90142ff505531e4783ccf24254b5d9e
+      internalID: 373040791
       vertices: []
       indices: 
       edges: []
@@ -211,10 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      aria-spritesheet_0: 977361859
-      aria-spritesheet_1: -2137019525
-      aria-spritesheet_2: 1746859501
-      aria-spritesheet_3: -1804955222
+      tree_lampposts_0: -1905364419
+      tree_lampposts_1: -568607700
+      tree_lampposts_2: 1006871773
+      tree_lampposts_3: 938200807
+      tree_lampposts_4: -1893800297
+      tree_lampposts_5: 373040791
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
