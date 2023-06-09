@@ -32,18 +32,24 @@ public class AudioEventListener : MonoBehaviour
     private void MusicChange(string pa_MusicTrackName)
     {
         pr_MusicSource.clip = so_Music.FetchMusicTrack(pa_MusicTrackName);
+        pr_MusicSource.Play();
     }
 
     private void AmbienceChange(string pa_AmbienceTrackName)
     {
         pr_AmbienceSource.clip = so_Ambience.FetchAmbienceTrack(pa_AmbienceTrackName);
+        pr_AmbienceSource.Play();
     }
 
     private void SfxTrigger(string pa_SfxClipName)
     {
         foreach (AudioSource l_AudioSource in pr_SfxSources)
         {
-            if (!l_AudioSource.isPlaying) l_AudioSource.clip = so_Sfx.FetchSfxClip(pa_SfxClipName);
+            if (!l_AudioSource.isPlaying)
+            {
+                l_AudioSource.clip = so_Sfx.FetchSfxClip(pa_SfxClipName);
+                l_AudioSource.Play();
+            }
         }
     }
 

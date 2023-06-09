@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game/Level1/PotionStoreUpstairs.unity
     guid: 790d695de7f764f4cb60f075901b491b
+  - enabled: 1
+    path: Assets/Scenes/Game/Level1/PotionStoreDownstairs/PotionStoreDownstairs.unity
+    guid: d25cde1a7368f4144b286f61e92285b3
+  - enabled: 1
+    path: Assets/Scenes/Game/Level1/Outside/outside.unity
+    guid: d65d9b5761d5cc24b9d583bf12e4a9ca
   m_configObjects: {}
