@@ -10014,7 +10014,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ready to continue mage training? Let's get to it.
+        value: Leon, working hard I hope.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -10054,8 +10054,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 496
-        y: 134
+        x: 501.26318
+        y: 101.10527
         width: 160
         height: 30
     - id: 2
@@ -10137,7 +10137,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Have you been practicing light spells?
+        value: I suppose you must've practiced.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -11086,7 +11086,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: GertTut2
+        value: I understand the spell.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -11192,7 +11192,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: Yes
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
@@ -11452,8 +11452,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 77.647095}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7600002
   - id: 5
     fields:
     - title: Title
@@ -26546,7 +26546,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 1
+        destinationConversationID: 8
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -26558,9 +26564,58 @@ MonoBehaviour:
         y: 100
         width: 160
         height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Right, sorry.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 80
+        y: 150
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 15.246096, y: 12.992417}
+    canvasZoom: 1.0899999
   syncInfo:
     syncActors: 0
     syncItems: 0
